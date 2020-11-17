@@ -1,27 +1,31 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppComponent } from './app.component';
-
-// Import of the angular-material angular module
-import { AngularMaterialModule } from '../angular-material/angular-material.module';
-import { MatTabsModule } from '@angular/material';
+import { AppComponent } from "./app.component";
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatIconModule,
+  MatMenuModule,
+  MatTabsModule,
+  MatToolbarModule
+} from "@angular/material";
+// import { ViewitemComponent } from "./viewitem/viewitem.component";
+// import { ListitemComponent } from "./listitem/listitem.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
-  imports: [ 
+  imports: [
+    BrowserAnimationsModule,
     BrowserModule,
-    FormsModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
     MatTabsModule,
-
-    // Import of the angular-material angular module
-    AngularMaterialModule
+    MatCardModule
   ],
-  declarations: [
-    AppComponent
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
